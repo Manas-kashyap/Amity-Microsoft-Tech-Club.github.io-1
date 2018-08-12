@@ -1,22 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Amity Microsoft Tech Club - Website">
+    
+    <!-- Search engine optimisatin -->
+    <meta name="description" content="AMTC Official Website">
+    <meta name="keywords" content="Aset, AMTC, Microsoft Club, Technical, Amity">
     <meta name="author" content="AMTC">
-
-    <title>AMTC : AMITY MICROSOFT TECH CLUB </title>
+	<!-- End Search Engine Optimisation -->
+    
+    <title>AMTC : Amity Microsoft Technical Club</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
+	<!-- Font Awesome CSS -->
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    
     <!-- Custom CSS -->
     <link href="css/scrolling-nav.css" rel="stylesheet">
-
+    
+    <link href="css/main.css" rel="stylesheet" />
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -29,22 +36,30 @@
 <!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-
+	<div class="minScreenSizeOverlay">
+    	<div>
+        	You Need a Bigger Display!
+        </div>
+    </div>
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header page-scroll">
+            	
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">HOME</a>
+                
+                <a class="navbar-brand page-scroll logoContainer" href="#page-top">
+                    	<img src="images/logo.png" class="logo"/>
+                </a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <div class="collapse navbar-collapse navbar-ex1-collapse navigation-links">
                 <ul class="nav navbar-nav">
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                     <li class="hidden">
@@ -72,6 +87,21 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1>About</h1>
+                    <p class="siteAboutContainer"></p>
+                </div>
+            </div>
+            <div class="row  text-left siteAboutMore">
+            	<div class="siteAboutHistory">
+                	<i class="fa fa-flag iconMed"></i> <span class="heading">The Journey</span>
+                    <p class="description"></p>
+                </div>
+                <br/>
+                <div class="siteAboutServices">
+                	<i class="fa fa-university iconMed"></i> <span class="heading">What we provide?</span>
+                    <p class="description">
+                    	Here is a list of what we provide: <br/>
+                        <ul class="list-group list-unstyled servicesList"></ul>
+                    </p>
                 </div>
             </div>
         </div>
@@ -79,22 +109,27 @@
 
 
     <!-- Events Section -->
-    <section id="events" class="services-section">
+    <section id="events" class="events-section">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
-                    <h1>Upcoming Events</h1>
-                </div>
+                <div class="col-lg-12 text-center">
+                    <h1 class="section-header">Upcoming Events</h1>
+                 </div>
             </div>
-        </div>
+            <div class="row eventsList row-centered text-center">
+          		
+         	</div>
+       </div>
     </section>
+    
 
+    
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>Contact Us</h1>
+                    <h1 class="section-header">Contact Us</h1>	
                 </div>
             </div>
         </div>
@@ -109,6 +144,9 @@
     <!-- Scrolling Nav JavaScript -->
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/scrolling-nav.js"></script>
+    
+    <!-- Functionality Scripts -->
+    <script src="js/data.js"></script>
 
 </body>
 

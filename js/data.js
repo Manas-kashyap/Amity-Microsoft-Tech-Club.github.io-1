@@ -1,11 +1,11 @@
 
 /** Site Description **/
-var siteTitle = "ASET-ALiAS : Amity Linux Assistance Sapience ";
-var siteAbout = "ASET-ALiAS, Amity Linux Assistance Sapience, is a club that offers you...";
+var siteTitle = "AMTC : Amity Microsoft Technical Club ";
+var siteAbout = "AMTC : ABOUT US";
 var logoUrl = "images/logo.png";
 
 /** Intro Section **/
-var siteAboutHistory = "ALIAS, was founded by <NAME> on <DATE>. Since, then it has been a great platform to learn new things...<br>More content goes here<br/> even more goes here";
+var siteAboutHistory = "AMTC, Hisotry of AMTC";
 
 var services = [];
 var events = [];
@@ -23,11 +23,6 @@ events[2] = {title: "Test Event 3", cta: "#", ctaText: "Register Now", descripti
 events[3] = {title: "Test Event 4", cta: "#", ctaText: "Register Now", description: "Some description of this event! <strong> Can use Html Tags</strong>", startTime: "11:00 AM", endTime: "2:00 PM", location: "E3-316", eventOD: 1};
 /** End Events List **/
 
-/**Alumni List **/
-alumni[0] = {name:"Test Name 0", job: "CEO/Founder, Company", ppicUrl: "images/alumni/1.jpg"};
-alumni[1] = {name:"Test Name 1", job: "CEO/Founder, Company", ppicUrl: "images/alumni/1.jpg"};
-alumni[2] = {name:"Test Name 2", job: "CEO/Founder, Company", ppicUrl: "images/alumni/1.jpg"};
-
 
 /** Containers **/
 
@@ -37,7 +32,7 @@ var siteAboutContainer = $(".siteAboutContainer");
 var siteAboutHistoryContainer = $(".siteAboutHistory .description");
 var siteServicesListContainer = $(".servicesList");
 var eventsListContainer = $(".eventsList");
-var alumniListContainer = $(".alumniList");
+
 
 /** Load Data **/
 
@@ -65,36 +60,3 @@ for (var x in events){
 		eventsListContainer.append(html);
 }
 
-/**
-
-Alumni Box Template 
-
-	<div class="col-lg-2 alumniBox box-shadow col-centered">
-                	<div class="row">
-                    	<div class="col-lg-12 text-center">
-		                	<div class="alumniPhotoContainer horizon-center box-shadow">
-    		                	<img src="images/alumni/1.jpg"/>
-        		            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                    	<div class="col-lg-12 text-center">
-	                       	<div class="alumniInfoContainer">
-    	                		<strong><div class="alumniName">Ayush Agarwal</div></strong>
-        	                	<div class="alumniJob">CEO/Founder, Letstream</div>
-	        	            </div>
-                        </div>
-    	            </div>
-                </div>
-
-**/
-
-for (var x in alumni){
-	var html = '<div class="col-lg-2 alumniBox box-shadow col-centered">';
-	html+='<div class="row"><div class="col-lg-12 text-center"><div class="alumniPhotoContainer horizon-center box-shadow"><img src="'+alumni[x].ppicUrl+'"/></div></div></div>';
-	html+='<div class="row"><div class="col-lg-12 text-center"><div class="alumniInfoContainer">';
-	html+='<strong><div class="alumniName">'+alumni[x].name+'</div></strong>';
-	html+='<div class="alumniJob">'+alumni[x].job+'</div>';
-	html+='</div></div></div></div>';
-	alumniListContainer.append(html);
-}
